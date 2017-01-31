@@ -54,8 +54,8 @@ public class DataSetIteratorTest {
 			assertTrue(ds.getLabels().sum(Integer.MAX_VALUE).getDouble(0)==1.0);
 		}
 		assertEquals(5, irisC);
-		
-		
+
+
 		//MNIST:
 		DataSetIterator mnist = new MnistDataSetIterator(1, 5);
 		int mnistC = 0;
@@ -65,16 +65,6 @@ public class DataSetIteratorTest {
 			assertTrue(ds.getLabels().sum(Integer.MAX_VALUE).getDouble(0)==1.0);
 		}
 		assertEquals(5, mnistC);
-		
-		//LFW:
-		DataSetIterator lfw = new LFWDataSetIterator(1, 5);
-		int lfwC = 0;
-		while(lfw.hasNext()){
-			lfwC++;
-			DataSet ds = lfw.next();
-			assertTrue(ds.getLabels().sum(Integer.MAX_VALUE).getDouble(0)==1.0);
-		}
-		assertEquals(5, lfwC);
 	}
 
 	@Test
